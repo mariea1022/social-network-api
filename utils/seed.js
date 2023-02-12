@@ -17,14 +17,13 @@ connection.once("open", async () => {
   // Drop existing users
   await User.deleteMany({});
 
-  // Create empty array to hold the users
+  // Create empty array to hold the users & thoughts
   const users = [];
+  const thoughts = getRandomThought(2);
 
   // Loop 4 times -- add users to the users array
   for (let i = 0; i < 4; i++) {
-    // Get some random assignment objects using a helper function that we imported from ./data
-    const thoughts = getRandomThought(4);
-
+    const thoughts = getRandomThought(2);
     const username = getRandomUsername();
     const email = getRandomEmail();
 
@@ -33,16 +32,14 @@ connection.once("open", async () => {
       email,
       thoughts,
     });
+    console.log(users);
   }
 
   // Add users to the collection and await the results
   await User.collection.insertMany(users);
 
   // Add thoughts to the collection and await the results
-  await Thought.collection.insertOne({
-    thoughtText: "the best thought ever",
-    reactions: [...reactions],
-  });
+  await Thought.collection.insertMany(thoughts);
 
   // Log out the seed data to indicate what should appear in the database
   console.table(users);
