@@ -1,4 +1,4 @@
-const connection = require("../config/connection");
+const connection = require("../config/config");
 const { Thought, User, Reaction } = require("../models");
 const {
   getRandomUsername,
