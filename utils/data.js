@@ -18,7 +18,11 @@ const usernameArray = [
     'bpitt',
     'sjohansson',
     'mjordan',
-    'mjackson'
+    'mjackson',
+    'jchang',
+    'vwilliams',
+    'fnadal',
+    'swilliams'
 ];
 
 const emailArray = [
@@ -42,6 +46,10 @@ const emailArray = [
     'galaxy@testing.com',
     'universe@testing.com',
     'earth@testing.com',
+    'random_1@random.com',
+    'random_2@ramdom.com',
+    'random_3@random.com',
+    'random_4@random.com'
 ];
 
 const thoughtArray = [
@@ -107,12 +115,14 @@ const getRandomThought = (int) => {
     for (let i = 0; i < int; i++) {
       results.push({
         thoughtText: getRandomArrItem(thoughtArray),
-        reactions: getRandomArrItem(reactionArray),
-        // username: getRandomArrItem(usernameArray),
+        reactions: {
+          reactionBody: getRandomArrItem(reactionArray)
+        },
+        username: getRandomArrItem(usernameArray),
       });
     }
     return results;
   };
 
 // Export the functions for use in seed.js
-module.exports = { getRandomUsername, getRandomEmail, getRandomThought, };
+module.exports = { getRandomUsername, getRandomEmail, getRandomThought };

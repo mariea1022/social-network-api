@@ -23,14 +23,16 @@ connection.once("open", async () => {
 
   // Loop 4 times -- add users to the users array
   for (let i = 0; i < 4; i++) {
-    const thoughts = getRandomThought(2);
     const username = getRandomUsername();
     const email = getRandomEmail();
+    const thoughts = getRandomThought(2);
+    const friends = [];
 
     users.push({
       username,
       email,
       thoughts,
+      friends,
     });
     console.log(users);
   }
