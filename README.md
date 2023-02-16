@@ -26,7 +26,7 @@ Mongoose and Express.js.
 
 To use this application, follow these steps:
 
-Step 1: Install dependencies in package.json
+Step 1: Install dependencies in package.json <br>
 Step 2: Enter in command line 
 ``` 
 npm run start
