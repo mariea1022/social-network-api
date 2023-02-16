@@ -1,7 +1,10 @@
 # 18 NoSQL: Social Network API
+![Github license](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 The task was to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
+
+For this application, I used MongoDB, which is a schema-less NoSQL document database, and so to add structure to my data, I used Mongoose to define my schemas and models.
 
 ## User Story
 
@@ -17,12 +20,17 @@ Mongoose and Express.js.
 
 ## Usage
 
-[Here is a walkthrough video of the functionality of the app.](https://)
+[Here is a walkthrough video of the user and friend routes.](https://drive.google.com/file/d/1BRFYg8tZuJYRUnQ3P5Dc07kEOQn-X1Qa/view)
+
+[Here is a walkthrough video of the thought and reaction routes.](https://drive.google.com/file/d/1NCFGcystxayA3XlQUTbL_Ssy7BhWMKRf/view)
 
 To use this application, follow these steps:
 
-Step 1: 
-Step 2: 
+Step 1: Install dependencies in package.json
+Step 2: Enter in command line 
+``` 
+npm run start
+```
 
 ## Credits
 
